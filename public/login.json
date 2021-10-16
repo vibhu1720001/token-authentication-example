@@ -21,7 +21,7 @@
           "height": "10"
         }, {
           "type": "textfield",
-          "name": "email",
+          "name": "username",
           "style": {
             "size": "20",
             "color": "#8bb92d",
@@ -29,7 +29,7 @@
             "background": "#575757",
             "padding": "20"
           },
-          "placeholder": "enter email"
+          "placeholder": "enter username"
         }, {
           "type": "space",
           "height": "5"
@@ -66,7 +66,7 @@
               "url": "ROOT/users/sign_in.json",
               "method": "post",
               "data": {
-                "user[email]": "{{$get.email}}",
+                "user[username]": "{{$get.username}}",
                 "user[password]": "{{$get.password}}"
               }
             },
@@ -75,7 +75,7 @@
               "options": {
                 "domain": "ROOT",
                 "header": {
-                  "X-User-Email": "{{$jason.email}}",
+                  "X-User-username": "{{$jason.username}}",
                   "X-User-Token": "{{$jason.authentication_token}}"
                 }
               },
@@ -91,7 +91,7 @@
               "type": "$util.banner",
               "options": {
                 "title": "Error",
-                "description": "Something went wrong. Please check if you entered your email and password correctly"
+                "description": "Something went wrong. Please check if you entered your username and password correctly"
               }
             }
           }
@@ -120,7 +120,7 @@
               "url": "ROOT/users.json",
               "method": "post",
               "data": {
-                "user[email]": "{{$get.email}}",
+                "user[username]": "{{$get.username}}",
                 "user[password]": "{{$get.password}}"
               }
             },
@@ -129,7 +129,7 @@
               "options": {
                 "domain": "ROOT",
                 "header": {
-                  "X-User-Email": "{{$jason.email}}",
+                  "X-User-username": "{{$jason.username}}",
                   "X-User-Token": "{{$jason.authentication_token}}"
                 }
               },
@@ -145,7 +145,7 @@
               "type": "$util.banner",
               "options": {
                 "title": "Enter credentials",
-                "description": "Please enter both email and password"
+                "description": "Please enter both username and password"
               }
             }
           }
